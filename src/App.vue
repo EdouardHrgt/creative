@@ -3,7 +3,15 @@ import HomePage from './views/HomePage.vue';
 </script>
 
 <template>
-  <HomePage />
+  <div class="container">
+    <HomePage />
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.container {
+  width: 100%;
+  padding-inline: var(--inline-padding);
+}
+
+</style>

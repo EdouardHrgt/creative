@@ -9,8 +9,9 @@
   --size-2: 56px;
   --size-3: 20px;
   --size-4: 18px;
+  --size-5: 16px;
 
-  --padding-inline: 0;
+  --inline-padding: 7% 0;
 }
 
 /*-- RESETS --*/
@@ -25,6 +26,7 @@
   font: inherit;
   background-repeat: no-repeat;
   font-family: 'Commissioner', sans-serif;
+  color: var(--clr-txt-black);
 }
 
 img {
@@ -55,13 +57,13 @@ button:hover {
 }
 
 .btn-1 {
-  width: 140px;
+  width: 160px;
   height: 72px;
   background-color: var(--clr-red);
 }
 
 .btn-2 {
-  width: 140px;
+  width: 160px;
   height: 64px;
 }
 
@@ -136,6 +138,14 @@ button {
   font-weight: 400;
 }
 
+.on {
+  display: inline-block;
+}
+
+.off {
+  display: none;
+}
+
 /*-- ANIMATIONS --*/
 @keyframes slideIn {
   from {
@@ -146,11 +156,34 @@ button {
   }
 }
 
+@keyframes slideIn-2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
 @media screen and (max-width: 1440px) {
 }
 
 @media screen and (max-width: 1024px) {
+  :root {
+    --inline-padding: 2rem 0;
+    --size-1: 56px;
+  }
+  h1 {
+    line-height: 60px;
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
+  :root {
+    --inline-padding: 1rem;
+    --size-1: 40px;
+  }
+  h1 {
+    line-height: 42px;
+  }
 }

@@ -1,13 +1,11 @@
-<script setup></script>
+<script setup>
+import NavBar from '../components/NavBar.vue';
+import HeroBar from '../components/HeroBar.vue';
+</script>
 
 <template>
-  <h1>HelloWorld!</h1>
+  <NavBar />
+  <HeroBar />
 </template>
 
-<style scoped>
-h1 {
-  font-size: clamp(3rem, 4vw, 5rem);
-  color: hotpink;
-  text-align: center;
-}
-</style>
+<style scoped></style>
