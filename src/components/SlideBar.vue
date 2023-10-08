@@ -45,9 +45,9 @@ const nextSlide = () => {
   <section class="slider">
     <div class="slider-container flex">
       <div class="slider-txt">
+        <img src="../assets/desktop/bg-pattern-wavy-white.svg" alt="#" class="white-wave animate" :key="animationKey" />
         <h3 class="animate" :key="animationKey">
           {{ content.title }}
-          <img src="../assets/desktop/bg-pattern-wavy-white.svg" alt="" />
         </h3>
         <div class="btns flex-align">
           <button @click="prevSlide()" class="btn-circle"><img src="../assets/desktop/icon-arrow-previous.svg" alt="" /></button>
@@ -92,6 +92,7 @@ const nextSlide = () => {
   display: grid;
   place-content: center;
   width: calc(100% - var(--card-width));
+  min-width: 500px;
   height: 33rem;
   position: relative;
   z-index: 2;
@@ -105,17 +106,17 @@ h3 {
   font-size: var(--size-2);
   line-height: 64px;
   max-width: 27.813rem;
-  position: relative;
   margin-bottom: 3rem;
   color: var(--clr-white);
 }
 
-h3 img {
+.white-wave {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: -12.5rem;
+  left: 90%;
   z-index: 1;
+  width: 8rem;
 }
 
 .btns {
@@ -152,5 +153,52 @@ h3 img {
   font-size: 18px;
   color: var(--clr-white);
   margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .slider-container {
+    height: 29.5rem;
+  }
+  .slider-txt {
+    width: calc(100% - var(--card-width));
+    min-width: 400px;
+    height: 22rem;
+    padding-inline: 2rem;
+  }
+  h3 {
+    font-size: 32px;
+    line-height: 40px;
+    max-width: unset;
+    margin-bottom: 1rem;
+  }
+  .white-wave {
+    left: 87%;
+
+    width: 6rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .slider-container {
+    flex-direction: column-reverse;
+    margin-bottom: 0rem;
+    height: fit-content;
+  }
+  .slider-img {
+    position: initial;
+    height: 22rem;
+    width: 100%;
+  }
+  .slider-txt {
+    width: 100%;
+    text-align: center;
+    min-width: 0;
+  }
+  .btns {
+    margin-inline: auto;
+  }
+  .white-wave {
+    display: none;
+  }
 }
 </style>

@@ -113,6 +113,7 @@ h2 strong {
   margin-left: auto;
   position: relative;
   top: -10rem;
+  margin-bottom: -10rem;
 }
 
 h3 {
@@ -248,6 +249,7 @@ h4 {
     width: 100%;
     min-width: unset;
     padding-left: 2rem;
+    margin-bottom: 0;
   }
 }
 </style>
