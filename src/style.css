@@ -12,6 +12,7 @@
   --size-5: 16px;
 
   --inline-padding: 7% 0;
+  --card-width: 60%;
 }
 
 /*-- RESETS --*/
@@ -173,6 +174,16 @@ button {
     transform: translateY(0px);
   }
 }
+
+@keyframes move-left {
+  from {
+    transform: translateX(-2500px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
 
 .fade-enter-active,
 .fade-leave-active {

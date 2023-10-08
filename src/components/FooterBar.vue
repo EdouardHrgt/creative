@@ -13,4 +13,20 @@ footer {
   background-image: url('../assets/desktop/bg-pattern-wave-red.svg');
   background-position-x: -4rem;
 }
+
+@media screen and (max-width: 1024px) {
+  footer {
+    flex-direction: column;
+    background-image: none;
+    padding-block: 3rem;
+  }
+  button {
+    margin-top: 2rem;
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+  }
+}
 </style>

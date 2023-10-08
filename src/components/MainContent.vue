@@ -168,6 +168,9 @@ h4 {
     left: -18rem;
     transform: translateY(-50%);
   }
+  #wave {
+    width: 7rem;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -194,6 +197,10 @@ h4 {
   .nb {
     left: -1rem;
   }
+    #wave {
+    width: 5rem;
+     right: -2.5rem;
+  }
 }
 
 @media screen and (max-width: 880px) {
@@ -214,13 +221,13 @@ h4 {
   }
 
   #wave {
-  top: unset;
-  right: unset;
-  left: 2rem;
-  transform: translateY(0);
-  bottom: -1rem;
-  z-index: 0;
-}
+    top: unset;
+    right: unset;
+    left: 2rem;
+    transform: translateY(0);
+    bottom: -1rem;
+    z-index: 0;
+  }
 
   .col-1-img {
     display: block;
